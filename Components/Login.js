@@ -13,7 +13,7 @@ const Login = ({submitLogin}) => {
             <TextInput style={styles.loginTextInput} placeholder='Email' onChangeText={(text) => setEmailText(text)}/>
             <TextInput style={styles.loginTextInput} placeholder='Password' secureTextEntry={true} onChangeText={(text) => setPasswordText(text)}/>
             <TouchableOpacity style={styles.loginBtn}>
-                <Text style={styles.loginBtnText}>
+                <Text style={styles.loginBtnText} onPress={() => submitLogin({name: nameText, email: emailText, password: passwordText})}>
                     Create Account
                 </Text>
             </TouchableOpacity>
